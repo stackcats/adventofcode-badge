@@ -1,0 +1,14 @@
+{
+  "name": "adventofcode-badge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:stackcats/adventofcode-badge.git",
+  "author": "stackcats <stackcats@foxmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^10.0.0",
+    "lodash": "^4.17.21",
+    "superagent": "^6.1.0"
+  }
+}
