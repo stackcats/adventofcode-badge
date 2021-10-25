@@ -26,6 +26,6 @@ module.exports = async (req, res) => {
   const allStars = stars.reduce((acc, star) => acc + star);
   console.log(allStars);
   res.json({
-    allStars,
+    allStars: `${allStars}*`,
   });
 };
