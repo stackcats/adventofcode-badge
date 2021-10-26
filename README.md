@@ -22,7 +22,7 @@ Then open the `Application` Tab on Chromium Browsers or `Storage` on Firefox. Th
 
 #### Deploy to Vercel
 
-Import project form this repo.
+Import project from this repo.
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/stackcats/adventofcode-badge)
 
