@@ -29,3 +29,6 @@ Import project from this repo.
 Add your environment variable named `SESSION` value is your session id.
 
 Click deploy. See your domains to use the API!
+
+## Elixir Solutions
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=stackcats&repo=adventofcode)](https://github.com/stackcats/adventofcode)
