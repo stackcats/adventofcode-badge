@@ -24,7 +24,7 @@ module.exports = async (req, res) => {
   const years = _.range(2015, currentYear + 1);
   const stars = await Promise.all(_.map(years, year => fetch(year)));
   const doc = {};
-  for (let i = 0; i < year; i++) {
+  for (let i = 0; i < years.length; i++) {
     doc[years[i]] = `${stars[i]}*`;
   }
   const allStars = stars.reduce((acc, star) => acc + star);
