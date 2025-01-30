@@ -20,8 +20,10 @@ async function fetch(year) {
 }
 
 module.exports = async (req, res) => {
-  const currentYear = new Date().getFullYear();
-  const years = _.range(2015, currentYear + 1);
+  const date = new Date();
+  const currentMonth = date.getMonth();
+  const currentYear = currentMonth === 11 ? date.getFullYear() + 1 : date.getFullYear();
+  const years = _.range(2015, currentYear);
   const stars = await Promise.all(_.map(years, year => fetch(year)));
   const doc = {};
   for (let i = 0; i < years.length; i++) {
@@ -29,6 +31,5 @@ module.exports = async (req, res) => {
   }
   const allStars = stars.reduce((acc, star) => acc + star);
   doc.allStars = `${allStars}*`
-  console.log(allStars);
   res.json(doc);
 };
