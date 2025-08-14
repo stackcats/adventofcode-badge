@@ -22,7 +22,7 @@ Import project from this repo.
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/stackcats/adventofcode-badge)
 
-Add your environment variable named `SESSION` value is your session id.
+Add your environment variable named `AOC_SESSION` value is your session id.
 
 Click deploy. See your domains to use the API!
 

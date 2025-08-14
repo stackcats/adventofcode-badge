@@ -3,13 +3,13 @@ require('dotenv').config();
 const cheerio = require('cheerio');
 const superagent = require('superagent');
 const _ = require('lodash');
-const session = process.env.SESSION;
+const aocSession = process.env.AOC_SESSION;
 
 async function fetch(year) {
   try {
     const res = await superagent.get(`https://adventofcode.com/${year}`)
           .set('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36')
-          .set('Cookie', `session=${session}`);
+          .set('Cookie', `session=${aocSession}`);
     const html = res.text;
     const $ = cheerio.load(html);
     return parseInt($('.star-count').text().replace('*', '')) || 0;
